@@ -1,0 +1,318 @@
+body {
+    font: 400 100%/1.5 'Open Sans', sans-serif;
+    background: #F9F9F9;
+    color: #555;
+}
+
+/* Header */
+#navbarNav {
+    flex-grow: 0;
+}
+.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.navbar-brand {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-weight: 900;
+}
+.navbar-brand, .nav-link {
+    color: rgba(255,255,255,.5);
+    transition: color .3s;
+}
+.navbar-brand:hover, .nav-link:hover {
+    color: rgba(255,255,255,1);
+}
+.navbar-toggler {
+    padding: 0.40rem 0.75rem;
+    background: rgba(0,0,0,.3);
+    color: #F9F9F9;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none!important;
+}
+.navbar-toggler-icon {
+    display: block;
+    width: auto;
+    height: auto;
+    vertical-align: unset;
+}
+/* Header */
+
+/* Sections */
+    /* Section 1 - Intro */
+    .section-1 {
+        position: relative;
+        color: #F9F9F9;
+    }
+    .section-1 .background {
+        background: #247BA0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: skewY(-6deg);
+        transform-origin: 0;
+        z-index: -1;
+    }
+    .section-1 .content {
+        min-height: 350px;
+        height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    /* End Section 1 - Intro */
+
+    /* Section 2  - About */
+    .section-2 {
+        padding: 1em 0 3em;
+        text-align: center;
+    }
+    .section-2 .container {
+        padding: 0 1.5em;
+    }
+    .section-2 .row > div {
+        max-width: 175px;
+    }
+    .section-2 .col-6, .section-2 .col-sm-4, .section-2 .col-md-3 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    /* End Section 2  - About */
+
+    /* Section 3 */
+    .section-3 {
+        position: relative;
+        padding-bottom: 4em;
+        text-align: center;
+    }
+
+    .section-3 .container {
+        padding: 0 1.5em;
+        padding-top: 4em;
+    }
+    .section-3 .background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #F3F3F3;
+        z-index: -1;
+        transform: skewY(-6deg);
+    }
+    /* End Section 3 */
+
+    /* Section 4 */
+    .section-4 {
+        padding-top: 3em;
+        text-align: center;
+    }
+
+    .section-4 .container {
+        padding: 0 1.5em;
+        padding-bottom: 3em;
+    }
+    /* End Section 4 */
+/* End Sections */
+
+/* Skills Card */
+.skill {
+    padding: .5em;
+    color: #888;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: .7em;
+    padding-bottom: .5em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(11,95,236,0.075);
+    border-radius: 3px;
+    box-shadow: 0 0.5rem 2.5rem rgba(60,127,239,0.15);
+    transition: transform .3s;
+}
+.skill .icon {
+    display: block;
+    margin: .5em;
+    margin-bottom: 1em;
+    width: 50px;
+}
+.skill .desc {
+    display: block;
+}
+.skill:before, .skill:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 6px;
+    background-color: green;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.skill:after {
+    right: 50%;
+    left: 50%;
+    background-color: red;
+    transition: left .3s, right .3s;
+}
+
+.skill:hover {
+    transform: translateY(-5%);
+}
+.skill:hover:after {
+    left: 0;
+    right: 0;
+}
+
+.skill.html:before {background-color: rgba(228, 78, 38, .2);}
+.skill.html:after {background-color: rgba(228, 78, 38, .8);}
+
+.skill.css:before {background-color: rgba(21, 114, 182, .2);}
+.skill.css:after {background-color: rgba(21, 114, 182, .8);}
+
+.skill.javascript:before {background-color: rgba(240, 219, 79, .4);}
+.skill.javascript:after {background-color: rgba(240, 219, 79, 1);}
+
+.skill.jquery:before {background-color: rgba(8, 104, 172, .2);}
+.skill.jquery:after {background-color: rgba(8, 104, 172, .8);}
+
+.skill.bootstrap:before {background-color: rgba(91, 66, 129, .2);}
+.skill.bootstrap:after {background-color: rgba(91, 66, 129, .8);}
+
+.skill.python:before {background-color: rgba(255, 216, 69, .4);}
+.skill.python:after {background-color: rgba(255, 216, 69, 1);}
+
+.skill.git:before {background-color: rgba(236, 81, 40, .2);}
+.skill.git:after {background-color: rgba(236, 81, 40, .8);}
+
+.skill.wordpress:before {background-color: rgba(72, 72, 72, .2);}
+.skill.wordpress:after {background-color: rgba(72, 72, 72, .8);}
+/* End Skills Card */
+
+/* Projects Card */
+.project {
+    margin: .5em auto;
+    max-width: 300px;
+    color: #888;
+    font-size: .9em;
+}
+.project .img {
+    border-radius: 5px;
+    width: 100%;
+}
+.project .title {
+    margin-top: .5em;
+    font-size: 1.2em;
+}
+.section-3 .project .title {
+    color: #555;
+}
+/* End Projects Card */
+
+/* Typography */
+.section-1, .title {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+}
+.title {
+    font-weight: 700;    
+}
+.section-1 .title {
+    text-transform: uppercase;
+    text-shadow: .1em .1em rgba(0,0,0,.2);
+}
+.section-2 .title {
+    color: #70C1B3;
+}
+.section-3 .title {
+    color: #FF1654;
+}
+.section-4 .title {
+    color: #247BA0;
+}
+/* Typography */
+
+/* Contact */
+.contact-details {
+    margin-top: 2em;
+}
+.social-media {
+    margin-top: 1em;
+}
+.social-media .icon {
+    background-color: #555;
+    color: #F9F9F9;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 1.5em;
+    margin-right: .2em;
+    transition: all .3s;
+}
+.social-media .icon:last-child {
+    margin-right: 0;
+}
+
+.social-media .twitter {background-color: rgba(0, 172, 235, .8);}
+.social-media .twitter:hover {background-color: rgba(0, 172, 235, 1);}
+
+.social-media .github {background-color: rgba(85, 85, 85, .8);}
+.social-media .github:hover {background-color: rgba(85, 85, 85, 1);}
+
+.social-media .codepen {background-color: rgba(25, 25, 25, .8);}
+.social-media .codepen:hover {background-color: rgba(25, 25, 25, 1);}
+
+.social-media .free-code-camp {background-color: rgba(52, 119, 55, .8)}
+.social-media .free-code-camp:hover {background-color: rgba(52, 119, 55, 1)}
+/* Contact */
+
+.footer {
+    text-transform: uppercase;
+    font-size: .9em;
+    padding: .2em;
+}
+.footer .fa-code {
+    color: #247BA0;    
+}
+.footer .fa-heart {
+    color: rgba(236, 81, 40, .8);
+}
+.footer a {
+    color: #247BA0;
+}
+
+@media (min-width: 420px) {
+    .skill {
+        margin-bottom: 1em;
+        padding: 1em 1em 3em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-1 .content {
+        min-height: 500px;
+    }
+    .container {
+        max-width: 1024px;
+    }
+    .navbar-expand-sm .navbar-nav .nav-link {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .nav-item {
+        border-bottom: 1px solid rgba(249, 249, 249,.2);
+    }
+}
